@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список созданных URL</title>
+</head>
+<body>
+<div style="font-size:50px">
+    <a href="{% url 'main_app:main' %}">Генератор коротких ссылок <br></a>
+</div>
+<br>
+{% if list == "Ничего не создано" %}
+<p>{{ list }}</p>
+{% else %}
+{% for d in list %}
+    <li><a href="{{d.long_url}}">{{d.long_url}}</a> ==> <a href="{{d.short_url}}">{{d.short_url}}</a></li>
+{% endfor %}
+{% endif %}
+<a href="{% url 'main_app:main' %}"><button type="button">на главную</button> </a>
+</body>
+</html>

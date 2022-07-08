@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор ссылок</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Введите ссылку которую нужно сократить</p>
+    <input type="url" name="url">
+    <button type="submit">сократить</button>
+</form>
+
+</body>
+</html>
