@@ -65,6 +65,7 @@ def coding(id):
         id = id // base
     return "".join(ret[::-1])
 
+
 def decoding(slug):
     res = []
     for i in slug:
@@ -73,7 +74,8 @@ def decoding(slug):
                 res.append(ind)
             else:
                 continue
-    return sum(res)+1
+    return sum(res) + 1
+
 
 def short_url_creater(request):
     """
@@ -113,6 +115,7 @@ def all_created_short_url(request, id):
     if len(list_of_url) == 0:
         return render(request, 'detail.html', context={'list': 'Ничего не создано'})
     return render(request, 'detail.html', context={'list': list_of_url})
+
 
 def redir_to_long_url(request, slug):
     get_id_long_url = decoding(slug)
