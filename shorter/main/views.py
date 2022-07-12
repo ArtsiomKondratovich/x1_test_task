@@ -73,16 +73,6 @@ def decoding(slug):
                 res.append(ind)
             else:
                 continue
-    return ''.join(res[::-1])
-
-def decoding(slug):
-    res = []
-    for i in slug:
-        for ind, it in enumerate(CHAR):
-            if i == it:
-                res.append(ind)
-            else:
-                continue
     return sum(res)+1
 
 def short_url_creater(request):
