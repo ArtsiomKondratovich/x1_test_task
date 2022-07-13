@@ -4,13 +4,19 @@
 
 Файлы с проектом находятся в директории shorter
 
-Скопируйте репозиторий 
+Установите python 3.10.4, если необходимо
 
-Установите python 3.10.4
+Скопируйте репозиторий
+
+git clone https://github.com/ArtsiomKondratovich/x1_test_task.git
 
 Установить виртуальное окружение
 
+pip -m venv venv
+
 Установить все зависимости из файла requirements.txt
+
+pip install -r requirements.txt
 
 _________
 Работает на localhost
