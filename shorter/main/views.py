@@ -67,6 +67,9 @@ def coding(id):
 
 
 def decoding(slug):
+    """
+    декодинг
+    """
     res = []
     for i in slug:
         for ind, it in enumerate(CHAR):
@@ -111,6 +114,9 @@ def short_url_creater(request):
 
 
 def all_created_short_url(request, id):
+    """
+    выводит все короткие URL определённого пользователя
+    """
     list_of_url = ShortUrlModel.objects.filter(user=id)
     if len(list_of_url) == 0:
         return render(request, 'detail.html', context={'list': 'Ничего не создано'})
@@ -118,6 +124,9 @@ def all_created_short_url(request, id):
 
 
 def redir_to_long_url(request, slug):
+    """
+    перенаправление на длинную ссылку
+    """
     get_id_long_url = decoding(slug)
     get_objects_for_extr_long_url = ShortUrlModel.objects.get(id=get_id_long_url)
     long_url = get_objects_for_extr_long_url.long_url
