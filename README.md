@@ -21,6 +21,8 @@ pip install -r requirements.txt
 _________
 Работает на localhost
 
+Была задеплоил давно, но была проблема. Ошибка H=10. Долго мучался, в итоге: просто не добавил в req... gunicorn
+https://artart28.herokuapp.com/(16/07/22)
 
 /* SQL */
 
